@@ -33,9 +33,17 @@ export class PortfolioService {
     id: string,
     updatePortfolioDto: UpdatePortfolioDto,
   ): Promise<Portfolio> {
-    return this.portfolioModel
-      .findByIdAndUpdate(id, updatePortfolioDto, { new: true })
-      .exec();
+    try {
+      const result = await this.portfolioModel
+        .findByIdAndUpdate(id, updatePortfolioDto, { new: true })
+        .exec();
+      if (!result) {
+        throw new NotFoundException(`Portfolio with id ${id} not found`);
+      }
+      return result;
+    } catch (error) {
+      throw new InternalServerErrorException('An error occurred during update');
+    }
   }
 
   async remove(id: string): Promise<{ message: string }> {
