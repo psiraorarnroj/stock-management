@@ -15,7 +15,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/stock",
+							"raw": "http://localhost:3000/stock",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -38,7 +39,8 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/portfolio",
+							"raw": "http://localhost:3000/portfolio",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -51,12 +53,13 @@
 					"response": []
 				},
 				{
-					"name": "Get Portfolio By ID",
+					"name": "Get Stock in Portfolio by Symbol",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/portfolio/{id}",
+							"raw": "http://localhost:3000/portfolio/{id}",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -70,7 +73,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Portfolio",
+					"name": "Add Stock to Portfolio",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -84,7 +87,8 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/portfolio",
+							"raw": "http://localhost:3000/portfolio",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -97,7 +101,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Portfolio",
+					"name": "Update Stock to Portfolio by ID",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -111,7 +115,8 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/portfolio/{id}",
+							"raw": "http://localhost:3000/portfolio/{id}",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
@@ -125,7 +130,7 @@
 					"response": []
 				},
 				{
-					"name": "Delete Portfolio",
+					"name": "Delete Stock from Portfolio",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -139,7 +144,8 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/portfolio/{id}",
+							"raw": "http://localhost:3000/portfolio/{id}",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
