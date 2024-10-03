@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "0bd6f42f-568a-4a88-9938-ffb36f5bdc2e",
+		"name": "Stock Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17729656"
+	},
+	"item": [
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Get Stock List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/stock",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"stock"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "Get Portfolio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/portfolio",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Portfolio By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/portfolio/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"portfolio",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 1,\n    \"purchasePrice\": 6.39\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/portfolio",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Portfolio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/portfolio/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"portfolio",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Portfolio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/portfolio/{id}",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"portfolio",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
