@@ -42,7 +42,7 @@ export class PortfolioService {
       }
       return result;
     } catch (error) {
-      throw new InternalServerErrorException('An error occurred during update');
+      throw new InternalServerErrorException(`An error occurred: ${error}`);
     }
   }
 
@@ -54,9 +54,7 @@ export class PortfolioService {
       }
       return { message: 'Delete Successful' };
     } catch (error) {
-      throw new InternalServerErrorException(
-        'An error occurred during deletion',
-      );
+      throw new InternalServerErrorException(`An error occurred: ${error}`);
     }
   }
 }

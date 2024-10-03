@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PortfolioModule } from './portfolio/portfolio.module';
+import { StockModule } from './stock/stock.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { PortfolioModule } from './portfolio/portfolio.module';
       inject: [ConfigService],
     }),
     PortfolioModule,
+    StockModule,
   ],
   controllers: [AppController],
   providers: [AppService],
