@@ -46,9 +46,7 @@ class PortfolioStore {
         axios.get(`${API_URL}/portfolio`),
       ]);
       response.data.forEach((res) => {
-        const matchingData = stock.data.find(
-          (s) => s.symbol === res.stockSymbol
-        );
+        const matchingData = stock.data.find((s) => s.symbol === res.symbol);
         let temp = { ...res };
         if (matchingData) {
           temp = {
@@ -97,6 +95,7 @@ class PortfolioStore {
     this.handleRequest(async () => {
       await axios.delete(`${API_URL}/portfolio/${id}`);
       await this.fetchPortfolio();
+      this.portfolio.filter((stock) => stock._id !== id);
     });
   }
 }

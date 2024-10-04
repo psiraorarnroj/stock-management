@@ -2,29 +2,34 @@ import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { Table, Button, Spin, Empty } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
+import { useLocation } from "react-router-dom";
 import ModalStock from "../components/modalStock";
 import store from "../stores/PortfolioStore";
 
 const PortfolioPage = observer(() => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedStock, setSelectedStock] = useState({});
+  const location = useLocation();
 
   useEffect(() => {
     store.fetchPortfolio();
-  }, []);
+  }, [location]);
 
   const handleSellStock = (stock) => {
     setIsModalVisible(true);
     setSelectedStock(stock);
   };
 
-  const handleOk = (id) => {
-    store.deleteStock(id);
+  const handleOk = (stock) => {
+    if (stock?._id) {
+      store.deleteStock(stock?._id);
+    }
     setIsModalVisible(false);
+    store.fetchPortfolio();
   };
 
   const columns = [
-    { title: "Symbol", dataIndex: "stockSymbol", key: "stockSymbol" },
+    { title: "Symbol", dataIndex: "symbol", key: "symbol" },
     { title: "Name", dataIndex: "name", key: "name", responsive: ["md"] },
     { title: "Quantity", dataIndex: "quantity", key: "quantity" },
     {
@@ -101,6 +106,7 @@ const PortfolioPage = observer(() => {
         onCancel={() => setIsModalVisible(false)}
         onOk={handleOk}
         stock={selectedStock}
+        isSell={true}
       />
     </>
   );
