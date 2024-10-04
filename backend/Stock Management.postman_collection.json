@@ -79,7 +79,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 1,\n    \"purchasePrice\": 6.39\n}",
+							"raw": "{\n    \"symbol\": \"AAACX\",\n    \"quantity\": 1,\n    \"purchasePrice\": 6.39\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -107,7 +107,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
+							"raw": "{\n    \"symbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -136,7 +136,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"stockSymbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
+							"raw": "{\n    \"symbol\": \"AAACX\",\n    \"quantity\": 2,\n    \"purchasePrice\": 6.39\n}",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -6,7 +6,7 @@ export type PortfolioDocument = Portfolio & Document;
 @Schema()
 export class Portfolio {
   @Prop({ required: true })
-  stockSymbol: string;
+  symbol: string;
 
   @Prop({ required: true })
   quantity: number;

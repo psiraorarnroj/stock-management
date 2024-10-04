@@ -2,7 +2,7 @@ import { IsString, IsNumber } from 'class-validator';
 
 export class CreatePortfolioDto {
   @IsString()
-  readonly stockSymbol: string;
+  readonly symbol: string;
   @IsNumber()
   readonly quantity: number;
   @IsNumber()
