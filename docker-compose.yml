@@ -6,16 +6,20 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - ./backend/.env.local
+      - ./backend/.env.production
+    environment:
+      - NODE_ENV=production
     depends_on:
       - mongo
 
   frontend:
     build: ./frontend
     ports:
-      - "3001:3000"
+      - "3001:3001"
     env_file:
       - ./frontend/.env.local
+    environment:
+      - NODE_ENV=production
     depends_on:
       - backend
 

@@ -34,7 +34,7 @@ class PortfolioStore {
   fetchStock() {
     this.handleRequest(async () => {
       const response = await axios.get(`${API_URL}/stock`);
-      this.stock = response.data;
+      this.stock = response?.data;
     });
   }
 
@@ -45,7 +45,7 @@ class PortfolioStore {
         axios.get(`${API_URL}/stock`),
         axios.get(`${API_URL}/portfolio`),
       ]);
-      response.data.forEach((res) => {
+      response?.data?.forEach((res) => {
         const matchingData = stock.data.find((s) => s.symbol === res.symbol);
         let temp = { ...res };
         if (matchingData) {
@@ -73,7 +73,7 @@ class PortfolioStore {
   fetchStockFromPortfolio(id) {
     this.handleRequest(async () => {
       const response = await axios.get(`${API_URL}/portfolio/${id}`);
-      this.stockQuote = response.data;
+      this.stockQuote = response?.data;
     });
   }
 
